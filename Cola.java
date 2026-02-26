@@ -1,11 +1,11 @@
-public class Cola<B> 
+public class Cola 
 {
-    private Nodo<B> frente;
-    private Nodo<B> fin;
+    private Nodo frente;
+    private Nodo fin;
 
-    public void encolar(B dato) 
+    public void encolar(dato) 
     {
-        Nodo<B> nuevo = new Nodo<>(dato);
+        Nodo nuevo = new Nodo<>(dato);
 
         if (fin == null) 
         {
@@ -18,11 +18,11 @@ public class Cola<B>
         }
     }
 
-    public B desencolar() 
+    public desencolar() 
     {
         if (frente == null) return null;
 
-        B dato = frente.getDato();
+        dato = frente.getDato();
         frente = frente.getSiguiente();
 
         if (frente == null) fin = null;
@@ -30,7 +30,7 @@ public class Cola<B>
         return dato;
     }
 
-    public B verFrente() 
+    public verFrente() 
     {
         return frente != null ? frente.getDato() : null;
     }
